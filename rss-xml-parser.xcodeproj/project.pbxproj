@@ -11,6 +11,7 @@
 		1F803B3A28CFC09800937B2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F803B3928CFC09800937B2B /* ContentView.swift */; };
 		1F803B3C28CFC09800937B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F803B3B28CFC09800937B2B /* Assets.xcassets */; };
 		1F803B3F28CFC09800937B2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F803B3E28CFC09800937B2B /* Preview Assets.xcassets */; };
+		1FAC125328CFC1ED00929D1E /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = 1FAC125228CFC1ED00929D1E /* SWXMLHash */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FAC125328CFC1ED00929D1E /* SWXMLHash in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = "rss-xml-parser";
+			packageProductDependencies = (
+				1FAC125228CFC1ED00929D1E /* SWXMLHash */,
+			);
 			productName = "rss-xml-parser";
 			productReference = 1F803B3428CFC09800937B2B /* rss-xml-parser.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 1F803B2B28CFC09800937B2B;
+			packageReferences = (
+				1FAC125128CFC1ED00929D1E /* XCRemoteSwiftPackageReference "SWXMLHash" */,
+			);
 			productRefGroup = 1F803B3528CFC09800937B2B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,6 +347,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1FAC125128CFC1ED00929D1E /* XCRemoteSwiftPackageReference "SWXMLHash" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/drmohundro/SWXMLHash.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1FAC125228CFC1ED00929D1E /* SWXMLHash */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1FAC125128CFC1ED00929D1E /* XCRemoteSwiftPackageReference "SWXMLHash" */;
+			productName = SWXMLHash;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1F803B2C28CFC09800937B2B /* Project object */;
 }
