@@ -23,9 +23,19 @@ struct ListView: View {
     @State var imageURL = ""
     @State var newsItems = [Item]()
     
+    @State private var testURL : String = ""
+    
     var body: some View {
         VStack{
             HStack {
+                TextField(
+                    "URL",
+                    text: $testURL
+                    )
+/*                .onSubmit {
+                    validate(name: testURL)
+                }
+  */
                 Button(action: loadData) {
                     Label("Load Data", systemImage: "gobackward")
                 }
@@ -55,7 +65,7 @@ struct ListView: View {
     func loadData(){
         //let url = NSURL(string: "https://rss.nytimes.com/services/xml/rss/nyt/Europe.xml")
         
-        let urlArray = [NSURL(string: "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"), NSURL(string: "https://www.tagesschau.de/xml/rss2/")]
+        let urlArray = [NSURL(string: testURL)]
                 
         urlArray.forEach { test in
         
